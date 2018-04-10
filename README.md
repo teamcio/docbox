@@ -1,3 +1,19 @@
+Docbox documentation from Yaml & Markdown
+-----------------------------------------
+
+This is a little repository fork to build documentation from markdown files without js sources.
+Sometimes you're have a more one API's and copying sources from repository for each project, -- it's a bad practice. So I decided to select main documentation files and use their separately from sources.
+
+This is a temporary implementation for next new project based on Docbox ideas and sources.
+
+# Usage
+
+```bash
+docker run --rm -it -v $(pwd)/content:/app/content -v $(pwd)/dist:/app/dist teamcio/docbox
+```
+
+# Original description
+
 <p align='center'><img src='https://c1.staticflickr.com/5/4786/26869034328_9ff90bf2ac.jpg' width=250>
 	<br />docbox</p>
 	

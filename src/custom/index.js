@@ -1,25 +1,23 @@
 'use strict';
 
+import config from '../config';
+
 /**
  * Brand names, in order to decreasing length, for different
  * media queries.
  */
-module.exports.brandNames = {
-  desktop: 'Wobble API Documentation',
-  tablet: 'Wobble API Docs',
-  mobile: 'API Docs'
-};
+module.exports.brandNames = config.options.brandNames;
 
 /**
  * Classes that define the top-left brand box.
  */
-module.exports.brandClasses = 'fill-red';
+module.exports.brandClasses = config.options.brandClasses;
 
 
 /**
  * Text for the link back to the linking website.
  */
-module.exports.backLink = 'Back to wobbles.com';
+module.exports.backLink = config.options.backLink;
 
 /**
  * Runs after highlighting code samples. You can use this

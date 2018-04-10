@@ -7,34 +7,12 @@ import GithubSlugger from 'github-slugger';
 import debounce from 'lodash.debounce';
 import { brandNames, brandClasses } from '../custom';
 import qs from 'querystring';
+import config from '../config';
 
 let slugger = new GithubSlugger();
 let slug = title => { slugger.reset(); return slugger.slug(title); };
 
-let languageOptions = [
-  { title: 'cURL',
-    short: 'cURL',
-    value: 'curl' },
-  { title: 'CLI',
-    short: 'cli',
-    value: 'cli' },
-  { title: 'Python',
-    short: 'Python',
-    value: 'python' },
-  { title: 'JavaScript',
-    short: 'JS',
-    value: 'javascript' },
-  { title: 'Java',
-    short: 'Java',
-    value: 'java' },
-  { title: 'Objective-C',
-    short: 'ObjC',
-    value: 'objc' },
-  { title: 'Swift',
-    short: 'Swift',
-    value: 'swift' }
-];
-
+let languageOptions = config.languages;
 let defaultLanguage = languageOptions[0];
 
 let debouncedReplaceState = debounce(hash => {
